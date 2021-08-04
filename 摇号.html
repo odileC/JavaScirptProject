@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .title{
+            padding: 0 10px;
+            text-align: center;
+            box-sizing: border-box;
+            width: 200px;
+            height: 50px;
+            line-height: 50px;
+            background-color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="yaohao">
+        <p class="title">京A WH758</p>
+        <input type="button" value="摇号" class="resetButton">
+    </div>
+    <script>
+        let licence=document.querySelector('.title');
+        let btn=document.querySelector('.resetButton');
+        let count=0;
+        btn.onclick=function () {
+            // 限制次数
+            count++;
+            if (count>=4){
+                alert('您已经摇过三次了');
+                return;
+            }
+            // 车牌号
+            let result="京";
+            let area1='ABCEFGHIJK';
+            let area2='ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+            result+=area1.charAt(Math.round(Math.random()*8));
+            result+=' ';
+            for(i=1;i<=5;i++){
+                result+=area2.charAt(Math.round(Math.random()*35));
+            }
+            licence.innerHTML=result;
+        }
+    </script>
+</body>
+</html>

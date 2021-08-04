@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function urlQuery(url){
+            let splitString=url.indexOf('?');
+            let splitStringE=url.lastIndexOf('#');
+            let splicedStr=url.slice(splitString+1,splitStringE);
+            let splicedHash=url.slice(splitStringE+1)
+            let obj={};
+            splicedHash ? obj['Hash']=splicedHash:null;
+            if (splicedStr){
+                let arr=splicedStr.split('&');
+                for(i=0;i<arr.length;i++){
+                    let item=arr[i];
+                    index=item.split('=');
+                    obj[index[0]]=index[1];
+                }
+
+            }
+            return obj;
+
+        }
+        let str="http://www.zhufengpeixun.com/stu/?name=zxt&age=28&sex=0#teacher"
+        let result=urlQuery(str);
+        console.log(result);
+    </script>
+</body>
+</html>
