@@ -1,0 +1,38 @@
+.btn,.btn::before{
+    width:200px;
+    height:30px;
+    line-height:30px;
+    text-align:center;
+    border-radius:3px;
+  }
+  .btn{
+    position:relative;
+    background:#5ad;
+    color:#fff;
+    cursor:pointer;
+  }
+  .btn::before{
+    content:"loading";
+    position:absolute;
+    display:none;
+    z-index:2;
+    top:0;
+    left:0;
+    color:#fff;
+    text-shadow:rgba(100,0,0,1) 0 0 3px;
+    background:linear-gradient(45deg,#fc0 0%,#fc0 20%,#fa0 20%, #fa0 45%,#fc0 45%,#fc0 70%,#fa0 70%, #fa0 95%,#fc0 95%,#fc0 100%);
+    background-size:30px 30px;
+    background-position:0 0;
+    animation:click 1s infinite linear;
+  }
+  .btn.click::before{
+    display:block;
+  }
+  @keyframes click {
+    0%{
+      background-position:0 0;
+    }
+    100%{
+      background-position:30px 0;
+    }
+  }

@@ -1,0 +1,402 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	overflow: hidden;
+	font:15px/1.5 Arial, Helvetica,sans-serif;
+	background-color:#f4f3f3;
+}
+.main{
+	flex-grow: 1;
+	position: relative;
+
+	
+	
+}
+clear::after{
+	display: block;
+	content: "";
+	clear: both;
+	height: 0;
+	visibility: hidden;
+}
+.father{
+	display: flex;
+	flex-direction: column;
+	height: 8.12rem;
+}
+.head{
+	font-size: 0.3rem;
+    text-indent: 0.2rem;
+    padding: 0.2rem;
+    width: 100%;
+    background-color: steelblue;
+    font-weight: bolder;
+    color: white;
+
+}
+.container{
+	width:100%;
+	
+}
+.title{
+	position: relative;
+	height: 0.2rem;
+    line-height: 0.2rem;
+	display: inline-block;
+	right: 0.5rem;
+}
+#goback{
+	top:0.06rem;
+	right:0.4rem;
+	color: white;
+}
+.treatment{
+	border-top: 1px solid transparent;
+	width: 100%;
+	height: 1.2rem;
+	background-color: rgb(119, 118, 118);
+}
+.patients{
+	margin-top: 0.1rem;
+	margin-left: 0.2rem;
+	font-size: 0.2rem;
+	color: #fff;
+	font-weight: bolder;
+}
+.treatment1{
+	border-top: 1px solid transparent;
+	width: 100%;
+	height: 1.2rem;
+	background-color: rgb(179, 174, 174);
+}
+ul{
+	margin-top: 0.2rem;
+   list-style: none;
+   display: flex;
+   justify-content: space-evenly;
+   text-align: center;
+}
+ul li{
+	box-sizing: border-box;
+	height: 0.6rem;
+	width: 0.6rem;
+	font-size: 0.25rem;
+	padding-top:0.15rem ;
+	font-weight: bolder;
+	border-radius:0.2rem ;
+	position: relative;
+	
+}
+ul li:first-child{
+	background-color: rgb(196, 233, 199);
+}
+ul li:nth-of-type(2){
+	background-color: rgb(225, 235, 135);
+}
+ul li:nth-of-type(3){
+	background-color:rgb(235, 175, 135);
+}
+ul li:nth-last-child(1){
+	background-color: rgba(255, 99, 71, 0.829);
+}
+.main-header{
+			text-align:center;
+			background-color: blue;
+			height:100px;
+			width:100%;
+			margin:0px;
+		}
+#brandname{
+	float:left;
+	font-size:30px;
+	color: #fff;
+	margin: 10px;
+}
+
+
+
+
+.btn-info {background-color: #2196F3;
+	height:40px;
+	width:100px;} /* Blue */
+.btn-info:hover {background: #0b7dda;}
+
+
+.resultss{
+	border-radius: 15px 50px;
+    background: #345fe4;
+    padding: 20px; 
+    width: 200px;
+    height: 150px;
+}
+.waittime{
+	font-size: 0.2rem;
+	font-weight: bolder;
+	text-align: center;
+   color: rgb(89, 102, 116);
+}
+.click{
+	background: red;
+}
+.update{
+	width: 100%;
+	height: 0.5rem;
+	background-color: rgb(111, 136, 212);
+	position: absolute;
+	bottom: 0;
+	
+}
+.lastUpdate{
+	
+	text-align: center;
+	color: white;
+	line-height: 0.5rem;
+	font-size: 0.2rem;
+}
+
+.waitani{
+width: 100%;
+height: 0.83rem;
+margin-top: 0.2rem;
+position: relative;
+
+}
+.waitani .docicon{
+	width: 1.5rem;
+	height: 0.83rem;
+	float: left;
+	background-image: url("doctor.jpg");
+            animation: walk 1.6s steps(6) infinite;
+	
+}
+@keyframes walk {
+	0% {
+		background-position-x: 0;
+	}
+
+	100% {
+		background-position-x: -800px;
+	}
+
+}
+@keyframes walkma {
+	0% {
+		background-position-x: 0;
+	}
+
+	100% {
+		background-position-x: -622px;
+	}
+
+}
+.walkman{
+	position: absolute;
+	right: 0;
+	z-index: 999;
+	width:65%;
+	height: 0.83rem;
+}
+.proLine{
+	position: absolute;
+	height: 0.1rem;
+	top: 50%;
+	margin-top: -0.05rem;
+	width: 100%;
+	border-radius: 0.1rem;
+	overflow: hidden;
+}
+.greenline{
+	height: 100%;
+	background-color: green;
+	border: none;
+	float: left;
+}
+.greenline1{
+	width: 80%;
+	height: 100%;
+	background-color: green;
+	border: none;
+	float: left;
+}
+.grayline1{
+	width: 20%;
+	height: 100%;
+	background-color: grey;
+	float: right;
+	border: none;
+}
+.greenline2{
+	width: 60%;
+	height: 100%;
+	background-color: green;
+	border: none;
+	float: left;
+}
+.grayline2{
+	width: 40%;
+	height: 100%;
+	background-color: grey;
+	float: right;
+	border: none;
+}
+.greenline3{
+	width: 45%;
+	height: 100%;
+	background-color: green;
+	border: none;
+	float: left;
+}
+.grayline3{
+	width: 55%;
+	height: 100%;
+	background-color: grey;
+	float: right;
+	border: none;
+}
+.greenline4{
+	width: 30%;
+	height: 100%;
+	background-color: green;
+	border: none;
+	float: left;
+}
+.grayline4{
+	width: 70%;
+	height: 100%;
+	background-color: grey;
+	float: right;
+	border: none;
+}
+.greenline5{
+	width: 20%;
+	height: 100%;
+	background-color: green;
+	border: none;
+	float: left;
+}
+.grayline5{
+	width: 80%;
+	height: 100%;
+	background-color: grey;
+	float: right;
+	border: none;
+}
+.grayline{
+	height: 100%;
+	background-color: grey;
+	float: right;
+	border: none;
+}
+
+.patienticon1{
+	background: url('../static/walman.png');
+	opacity: 0.7;
+	position: absolute;
+	z-index: 99999;
+	height: 0.85rem;
+	width: 1.24rem;
+	margin-top: -0.1rem;
+	left: 50%;
+	animation: walkma 1.2s steps(5) infinite;
+	
+}
+.patienticon2{
+	background: url('../static/walman.png');
+	opacity: 0.7;
+	position: absolute;
+	z-index: 99999;
+	height: 0.85rem;
+	width: 1.24rem;
+	left: 50%;
+	margin-top: -0.1rem;
+	margin-left: -0.4rem;
+	animation: walkma 1.2s steps(5) infinite;
+	
+}
+.patienticon{
+	background: url('../static/walman.png');
+	opacity: 0.7;
+	position: absolute;
+	z-index: 99999;
+	height: 0.85rem;
+	width: 1.24rem;
+	left: 50%;
+	margin-top: -0.1rem;
+	margin-left: -0.4rem;
+	animation: walkma 1.2s steps(5) infinite;
+	
+}
+.patienticon3{
+	background: url('../static/walman.png');
+	opacity: 0.7;
+	position: absolute;
+	z-index: 99999;
+	height: 0.85rem;
+	width: 1.24rem;
+	left: 50%;
+	margin-top: -0.1rem;
+	margin-left: -0.8rem;
+	animation: walkma 1.2s steps(5) infinite;
+	
+}
+.patienticon4{
+	background: url('../static/walman.png');
+	opacity: 0.7;
+	position: absolute;
+	z-index: 99999;
+	height: 0.85rem;
+	width: 1.24rem;
+	left: 50%;
+	margin-top: -0.1rem;
+	margin-left: -1.2rem;
+	animation: walkma 1.2s steps(5) infinite;
+	
+}
+.patienticon5{
+	background: url('../static/walman.png');
+	opacity: 0.7;
+	position: absolute;
+	z-index: 99999;
+	height: 0.85rem;
+	width: 1.24rem;
+	left: 50%;
+	margin-top: -0.1rem;
+	margin-left: -1.5rem;
+	animation: walkma 1.2s steps(5) infinite;
+	
+}
+#w1{
+	display: block;
+}
+.noticeAdd{
+	position: absolute;
+	height: 0.25rem;
+	width: 0.25rem;
+	background-color: rgb(235, 84, 84);
+	border-radius: 0.1rem;
+	top: 0%;
+	right: 0%;
+	margin-top: -0.1rem;
+	margin-right: -0.1rem;
+	/* animation: vanish 5s; */
+	/* opacity: 0; */
+	font-size: 0.2rem;
+	color: white;
+	
+}
+@keyframes vanish {
+	0%{
+		opacity: 0;
+	}
+	25%{
+		opacity:1
+	}
+	75%{
+		opacity:1
+	}
+	100% {
+		opacity: 0;
+	}
+}
