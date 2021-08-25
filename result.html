@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title></title>
+	<!-- <link rel="stylesheet" href="../static/styles.css"> -->
+	<!-- <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}"> -->
+	<link rel="stylesheet" href="../static/styles.css">
+	<link rel="stylesheet" href="../static/bootstrap-3.4.1-dist/css/bootstrap.min.css">
+	<script src="../static/jquery.js"></script>
+	<script src="../static/width.js"></script>
+
+</head>
+
+<body>
+	<div class="father">
+		<div class="head">
+			<div class="container">
+				<a href="{{url_for('index')}}"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"
+						id="goback"></span></a>
+				<h3 class="title">A&E wait time </h3>
+
+			</div>
+		</div>
+		<div class="main">
+			<div class="treatment">
+				</span>
+				<h2 class="patients">Patients in queue</h2>
+				<ul>
+					{% if w1change>0 %}     
+					<li>
+						<div class="noticeAdd" id="w1">
+                            +{{w1change}}
+						</div>
+						<div class="inText">
+							{{W1}}</div>
+					</li>
+					{% else %}
+					<li>
+						<div class="inText">
+							{{W1}}</div>
+					</li>
+					{% endif %} 
+					{% if w2change>0 %}     
+					<li>
+						<div class="noticeAdd">
+                            +{{w2change}}
+						</div>
+						<div class="inText">
+							{{W2}}</div>
+					</li>
+					{% else %}
+					<li>
+						<div class="inText">
+							{{W2}}</div>
+					</li>
+					{% endif %} 
+					{% if w3change>0 %}     
+					<li>
+						<div class="noticeAdd">
+                            +{{w3change}}
+						</div>
+						<div class="inText">
+							{{W3}}</div>
+					</li>
+					{% else %}
+					<li>
+						<div class="inText">
+							{{W3}}</div>
+					</li>
+					{% endif %} 
+					{% if w4change>0 %}     
+					<li>
+						<div class="noticeAdd">
+                            +{{w4change}}
+						</div>
+						<div class="inText">
+							{{W4}}</div>
+					</li>
+					{% else %}
+					<li>
+						<div class="inText">
+							{{W4}}</div>
+					</li>
+					{% endif %} 
+				</ul>
+			</div>
+			<div class="treatment1">
+				<h2 class="patients">Patients in treatment</h2>
+				<ul>
+					{% if t1change>0 %}     
+					<li>
+						<div class="noticeAdd">
+                            +{{t1change}}
+						</div>
+						<div class="inText">
+							{{T1}}</div>
+					</li>
+					{% else %}
+					<li>
+						<div class="inText">
+							{{T1}}</div>
+					</li>
+					{% endif %} 
+					{% if t2change>0 %}     
+					<li>
+						<div class="noticeAdd" >
+                            +{{t2change}}
+						</div>
+						<div class="inText">
+							{{T2}}</div>
+					</li>
+					{% else %}
+					<li>
+						<div class="inText">
+							{{T2}}</div>
+					</li>
+					{% endif %} 
+					{% if t3change>0 %}     
+					<li>
+						<div class="noticeAdd" >
+                            +{{t3change}}
+						</div>
+						<div class="inText">
+							{{T3}}</div>
+					</li>
+					{% else %}
+					<li>
+						<div class="inText">
+							{{T3}}</div>
+					</li>
+					{% endif %} 
+					{% if t4change>0 %}     
+					<li>
+						<div class="noticeAdd">
+                            +{{t4change}}
+						</div>
+						<div class="inText">
+							{{T4}}</div>
+					</li>
+					{% else %}
+					<li>
+						<div class="inText">
+							{{T4}}</div>
+					</li>
+					{% endif %} 
+				</ul>
+			</div>
+			<div>
+
+				<div class="results">
+
+
+
+
+					<h2 class="waittime">{{stringInfo}}</h2>
+
+
+				</div>
+				<div class="waitani clear">
+					<div class="docicon">
+
+					</div>
+
+					<div class="walkman">
+						<div class="proLine clear">
+							<div  id='green'></div>
+							<div id='gray'></div>
+						</div>
+
+						<div  id='patient'>
+
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="update">
+				<p class="lastUpdate">{{update}}</p>
+			</div>
+		</div>
+	</div>
+<script type="text/javascript">
+var icon=document.getElementById('patient')
+var green=document.getElementById('green')
+var gray=document.getElementById('gray')
+var myGeocode = "{{ratio|tojson }}";
+console.log( myGeocode)
+if(myGeocode==2){
+	icon.className='';
+	gray.className='';
+	green.className='';
+	icon.setAttribute("class", "patienticon5");
+	gray.setAttribute("class", "grayline5");
+	green.setAttribute("class", "greenline5");
+
+}
+else if(myGeocode==4){
+	icon.className='';
+	gray.className='';
+	green.className='';
+	icon.setAttribute("class", "patienticon4");
+	gray.setAttribute("class", "grayline4");
+	green.setAttribute("class", "greenline4");
+
+}
+else if(myGeocode==6){
+	icon.className='';
+	gray.className='';
+	green.className='';
+	icon.setAttribute("class", "patienticon3");
+	gray.setAttribute("class", "grayline3");
+	green.setAttribute("class", "greenline3");
+
+}
+else if(myGeocode==8){
+	icon.className='';
+	gray.className='';
+	green.className='';
+	icon.setAttribute("class", "patienticon2");
+	gray.setAttribute("class", "grayline2");
+	green.setAttribute("class", "greenline2");
+
+}
+else if(myGeocode==10){
+	icon.className='';
+	gray.className='';
+	green.className='';
+	icon.setAttribute("class", "patienticon1");
+	gray.setAttribute("class", "grayline1");
+	green.setAttribute("class", "greenline1");
+
+}
+</script>
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/login.css">
+    <link href="../static/bootstrap-3.4.1-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../static/styles.css">
+    <!-- <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='login.css') }}"> -->
+    <script src="../static/width.js"></script>
+    <script src="../static/jquery.js"></script>
+    <script src="../static/login.js" ></script>
+
+</head>
+<body>
+    <div id="originPage" class="ui-widget-overlay">
+    	<div class="head">
+            <div class="container">
+            <h3 class="title" id="aeh3">A&E wait time </h3>
+            
+        </div>
+        </div>
+    <div class="centerContent">
+        <h1 class="welcome" >Welcome</h1>
+        <h2 class="nhsNumber">Enter your NHS number to check wait times</h2>
+        <form action="{{ url_for('predict')}}" method="POST">
+            <p id="notification"></p>
+            <input type="number" class="nhsInput" name="NHSnumber"placeholder="Please enter your NHS number"  autofocus><span class="glyphicon glyphicon-ok-sign justify" aria-hidden="true" id="showResult"></span>
+           <input type="submit" value="Continue" class="submit" id="bt1" >
+        </form>
+        
+    </div>
+</div>
+<div id="overlay">
+    <div class="head">
+        <div class="container">
+        <h3 class="title" id="aeh3">A&E wait time </h3>
+        
+    </div>
+    </div>
+    
+    <div id='PleaseWait' class='aaa' >
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span></div>
+        <p class="loadMessage">Loading...Please wait.</p>
+</div>
+    <!-- <script src="{{url_for('static', filename='width.js')}}"></> -->
+    
+</body>
+</html>
